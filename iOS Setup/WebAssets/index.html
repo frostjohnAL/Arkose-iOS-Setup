@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script src="https://client-api.arkoselabs.com/fc/api/?onload=loadChallenge" async defer></script>
+        <script type="text/javascript">
+            function loadChallenge() {
+                new FunCaptcha({
+               public_key: "2FF9156C-1FE3-9558-6A63-07B0CD5B013C",
+               target_html: "CAPTCHA",
+               callback: function() {
+               console.log("played");
+               }
+               });
+            }
+        
+        setInterval(function(){
+                    
+            if(document.getElementById('FunCaptcha-Token')){
+                alert(document.getElementById('FunCaptcha-Token').innerHTML);
+            }
+        });
+        </script>
+    </head>
+    <body>
+        
+        <div id="CAPTCHA"></div>
+        </div>
+    </body>
+</html>
+
